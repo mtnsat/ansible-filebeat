@@ -1,6 +1,8 @@
 ---
 # The version of filebeat to install
 filebeat_version: 1.3.1
+# needed for deb archive download
+filebeat_architecture: "{{ ansible_architecture | replace(\"x86_64\",\"amd64\") }}"
 
 # `filebeat_config` is templated directly into filebeat.yml for the config.
 # You are expected to override this variable, as these configurations are
