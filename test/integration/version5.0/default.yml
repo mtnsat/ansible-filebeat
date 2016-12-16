@@ -1,7 +1,7 @@
-- name: test filebeat 5.0.0 install
+- name: test filebeat 5.0.2 install
   hosts: all
   sudo: yes
   vars:
-    filebeat_version: 5.0.0
+    filebeat_version: 5.0.2
   roles:
     - ansible-filebeat
