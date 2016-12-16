@@ -20,8 +20,8 @@
 
 - name: download filebeat deb from elastic.co
   get_url:
-    url: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-{{ filebeat_version }}-amd64.deb
-    dest: /var/cache/apt/archives/filebeat-{{ filebeat_version }}-amd64.deb
+    url: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-{{ filebeat_version }}-{{ filebeat_architecture }}.deb
+    dest: /var/cache/apt/archives/filebeat-{{ filebeat_version }}-{{ filebeat_architecture }}.deb
   when: filebeat_version_in_repo|failed
 
 - name: install filebeat deb from elastic.co
