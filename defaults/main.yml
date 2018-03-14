@@ -1,6 +1,6 @@
 ---
 # The version of filebeat to install
-filebeat_version: 5.6.3
+filebeat_version: 6.2.2
 # needed for deb archive download
 filebeat_architecture: "{{ ansible_architecture | replace(\"x86_64\",\"amd64\") }}"
 
@@ -32,3 +32,4 @@ filebeat_config:
 filebeat_ca_cert: null
 # Path to which the above certificate will be uploaded
 filebeat_ca_path: /etc/filebeat/ca.crt
+filebeat_apt_repo: 'deb https://artifacts.elastic.co/packages/6.x/apt stable main'
